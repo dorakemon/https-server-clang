@@ -23,6 +23,7 @@ gcc main.c HTTPServer.c RequestHandler.c ResponseHandler.c FileHandler.c DieWith
 create private key and certification
 
 ```shell
+cd secret
 genrsa 2048 > server.key
 openssl req -new -key server.key > server.csr
 openssl x509 -req -days 365 -signkey server.key < server.csr > server.crt
